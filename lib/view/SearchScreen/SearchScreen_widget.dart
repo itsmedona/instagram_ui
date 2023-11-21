@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/database/database.dart';
-
 
 class SearchScreenMedia extends StatelessWidget {
   const SearchScreenMedia({super.key});
@@ -10,6 +8,7 @@ class SearchScreenMedia extends StatelessWidget {
     return Container(
       height: double.infinity,
       width: double.infinity,
+      /*
       child: GridView.builder(
         itemCount: Database.media.length + 1,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -31,7 +30,7 @@ class SearchScreenMedia extends StatelessWidget {
                   ),
                 ],
               ),
-      ),
+      ),*/
     );
   }
 }

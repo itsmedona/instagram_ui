@@ -11,13 +11,13 @@ class SearchScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: ColorConstant.search,
         title: Container(
-            child: Row(
-          children: [
-            Icon(Icons.search),
-            SizedBox(width: 10),
-            Text("Search"),
-          ],
-        ),
+          child: Row(
+            children: [
+              Icon(Icons.search),
+              SizedBox(width: 10),
+              Text("Search"),
+            ],
+          ),
         ),
       ),
       body: Container(

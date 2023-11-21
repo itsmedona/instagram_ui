@@ -13,7 +13,9 @@ class InstImages {
   ];
 }
 
-class Search {
-  static String SearchScreenIcon =
-      ("assets/images/ant-design_search-outlined.png");
+class ImageConstant {
+  static String commentsButton = "assets/images/bubble-chat.png";
+  static String shareButton = "assetsimages/send.png";
+  static String reels = "assets/images/reels.png";
+  static String addition = "assets/images/more.png";
 }

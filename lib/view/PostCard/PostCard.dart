@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/database/database.dart';
 
 
 class PostCard extends StatelessWidget {
@@ -11,6 +10,7 @@ class PostCard extends StatelessWidget {
       height: double.infinity,
       width: double.infinity,
       // color: Colors.amber,
+      /*
       child: GridView.builder(
         itemCount: Database.media.length + 1,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -32,7 +32,7 @@ class PostCard extends StatelessWidget {
                   ),
                 ],
               ),
-      ),
+      ),*/
     );
   }
 }
