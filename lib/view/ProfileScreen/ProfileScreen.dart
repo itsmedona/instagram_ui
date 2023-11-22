@@ -43,9 +43,6 @@ class ProfileScreen extends StatelessWidget {
                     Text('123 followers'),
                     SizedBox(height: 8),
                     Text('85 following'),
-                    // SizedBox(
-                    //   height: 65,
-                    // ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
