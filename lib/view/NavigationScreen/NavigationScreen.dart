@@ -20,7 +20,7 @@ class _NavScreenState extends State<NavScreen> {
     HomeScreen(),
     SearchScreen(),
     ReelsScreen(),
-    PostCard(),
+    //Post(),
     ProfileScreen(),
   ];
   @override

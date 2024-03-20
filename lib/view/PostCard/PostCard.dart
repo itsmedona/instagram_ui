@@ -1,38 +1,64 @@
 import 'package:flutter/material.dart';
 
-
-class PostCard extends StatelessWidget {
-  const PostCard({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: double.infinity,
-      width: double.infinity,
-      // color: Colors.amber,
-      /*
-      child: GridView.builder(
-        itemCount: Database.media.length + 1,
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          crossAxisSpacing: 2,
-          mainAxisSpacing: 2,
+Widget Post(int index) {
+  return Card(
+    margin: EdgeInsets.all(8.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Row(
+            children: [
+              CircleAvatar(
+                backgroundImage:
+                    AssetImage('assets/images/Rectangle($index).png'),
+                backgroundColor: Colors.grey,
+                radius: 20,
+              ),
+              SizedBox(width: 8.0),
+              Text(
+                'Username $index',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
         ),
-        itemBuilder: (context, index) => index == Database.media.length
-            ? SizedBox(
-                height: 5,
-              )
-            : Column(
+        Image.asset(
+          'assets/images/Rectangle($index).jpg',
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: 300,
+        ),
+        Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Description $index',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: 4.0),
+              Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus eget ipsum varius maximus. Integer ac mauris enim. Nulla facilisi.',
+              ),
+              SizedBox(height: 8.0),
+              Row(
                 children: [
-                  Container(
-                    child: Image.asset(
-                      Database.media[index],
-                      fit: BoxFit.fill,
-                    ),
-                  ),
+                  Icon(Icons.favorite_border),
+                  SizedBox(width: 4.0),
+                  Text('123 likes'),
                 ],
               ),
-      ),*/
-    );
-  }
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }

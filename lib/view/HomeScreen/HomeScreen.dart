@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:instagram/utils/color_constant/color_constant.dart';
 import 'package:instagram/utils/image_constant/image_constant.dart';
 
+import '../PostCard/PostCard.dart';
+
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -127,63 +129,18 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/Rectangle (2).png"),
-                    fit: BoxFit.fill),
+            SizedBox(
+              height: MediaQuery.of(context).size.height - 220,
+              child: ListView.builder(
+                itemCount: 10,
+                itemBuilder: (context, index) {
+                  return Post(index);
+                },
               ),
-              height: 200,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle (6).png"),
-                      fit: BoxFit.fill)),
-              height: 200,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle (5).png"),
-                      fit: BoxFit.fill)),
-              height: 200,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle (4).png"),
-                      fit: BoxFit.fill)),
-              height: 200,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/Rectangle (3).png"),
-                      fit: BoxFit.fill)),
-              height: 200,
             ),
           ],
         ),
       ),
     );
-
-    /*body:
-    ListView.builder(
-      itemCount: 10,
-      itemBuilder: (context, index) => PostCard(),
-    );*/
   }
 }
